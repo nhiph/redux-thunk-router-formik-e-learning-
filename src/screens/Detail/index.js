@@ -3,25 +3,13 @@ import {connect} from 'react-redux';
 import axios from 'axios';
 import {courseSerVice} from '../../Services/index';
 import {createAction} from '../../redux/actions';
-import { FETCH_COURSE_DETAIL } from '../../redux/actions/types';
+import {fetchDetailCourse} from '../../redux/actions/users';
 
 
 class CourseDetailScreen extends Component {
 
     componentDidMount(){
-        courseSerVice
-        .fetchCourseDetail()
-        .then(
-            (res) => {
-                console.log(res.data);
-                this.props.dispatch(createAction(FETCH_COURSE_DETAIL, res.data))
-            }
-        )
-        .catch(
-            (err) => {
-                console.log(err);
-            }
-        )
+        this.props.dispatch(fetchDetailCourse(this.props.match.params.courseId))
     }
 
     render() {
