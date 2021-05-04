@@ -1,7 +1,7 @@
 import {courseSerVice, courseService} from '../../Services/index';
-import { createAction } from '../../redux/actions';
-import { FETCH_COURSES } from '../../redux/actions/types';
-import { FETCH_COURSE_DETAIL } from '../../redux/actions/types';
+import { createAction } from '.';
+import { FETCH_COURSES } from './types';
+import { FETCH_COURSE_DETAIL } from './types';
 
 // actions async (loai 2)
 

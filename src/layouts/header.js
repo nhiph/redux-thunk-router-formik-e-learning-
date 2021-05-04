@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {Link, NavLink} from 'react-router-dom';
+import {connect} from 'react-redux';
 
-export default class Header extends Component {
+class Header extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
@@ -17,12 +18,17 @@ export default class Header extends Component {
                     </ul>
 
                     <ul className="navbar-nav">
+                    {this.props.credentials ? <li className="nav-item">
+                            <span className="nav-link">Hi, {this.props.credentials.HoTen}</span>
+                        </li> : <>
                         <li className="nav-item">
                             <NavLink activeStyle={{color: 'orange'}} to="/signup" className="nav-link">Sign up</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink activeStyle={{color: 'orange'}} to="/signin" className="nav-link">Sign in</NavLink>
                         </li>
+                        </>}
+                        
                     </ul>
                 </div>
             </nav>
@@ -30,3 +36,11 @@ export default class Header extends Component {
         )
     }
 }
+
+const mapStateToProps = state => {
+    return{
+        credentials: state.user.credentials
+    }
+}
+
+export default connect(mapStateToProps)(Header);

@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import axios from 'axios';
 import {courseSerVice} from '../../Services/index';
 import {createAction} from '../../redux/actions';
-import {fetchDetailCourse} from '../../redux/actions/users';
+import {fetchDetailCourse} from '../../redux/actions/course';
 
 
 class CourseDetailScreen extends Component {

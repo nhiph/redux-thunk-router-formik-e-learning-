@@ -21,6 +21,15 @@ class UserSerVice{
             data: data
         });
     }
+
+    signIn(user){
+        console.log(user);
+        return axios({
+            url: 'http://svcy.myclass.vn/api/QuanLyTrungTam/DangNhap',
+            method: 'POST',
+            data: user
+        });
+    }
 }
 
 export default UserSerVice;

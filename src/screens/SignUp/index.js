@@ -48,7 +48,7 @@ class SignUpScreen extends Component {
                     <div className="form-group">
                         <label>Password: </label>
                         <Field 
-                            type="text" 
+                            type="password" 
                             className="form-control" 
                             name="MatKhau" 
                             onChange={formikProps.handleChange}/>
