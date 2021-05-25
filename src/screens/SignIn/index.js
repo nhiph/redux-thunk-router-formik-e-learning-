@@ -36,7 +36,7 @@ class SigninScreen extends Component {
                                 onChange={formikProps.handleChange}    
                             />
                         </div>
-                        <button className="btn btn-success">Submit</button>
+                        <button type="submit" className="btn btn-success">Submit</button>
                     </Form>
                 )}
             />

@@ -6,7 +6,7 @@ import {fetchCourses} from '../../redux/actions/course';
 class HomeScreen extends Component {
 
     componentDidMount() {
-        this.props.dispatch(fetchCourses())
+        this.props.dispatch(fetchCourses()) //tuong duong mapDispatchToProps
     }
 
     render() {
@@ -17,7 +17,7 @@ class HomeScreen extends Component {
                     <div className="row">
                         {this.props.courseList.map((item, index) => {
                             return <div className="col-3">
-                                <CourseItem item={item} />
+                                <CourseItem item={item} />  
                             </div>
                         })}
                     </div>

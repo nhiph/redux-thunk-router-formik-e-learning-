@@ -8,6 +8,7 @@ import {signupUserSchema} from '../../Services/Users';
 
 class SignUpScreen extends Component {
     handleSubmit = (values) => {
+        console.log(values);
         userSerVice
         .signUp(values)
         .then(res => {

@@ -9,9 +9,9 @@ class CourseService{
         })
     }
 
-    fetchCourseDetail(){
+    fetchCourseDetail(id){
         return axios({
-            url: '/api/QuanLyTrungTam/ChiTietKhoaHoc/{111}',
+            url: `/api/QuanLyTrungTam/ChiTietKhoaHoc/${id}`,
             method: 'GET'
         })
     }

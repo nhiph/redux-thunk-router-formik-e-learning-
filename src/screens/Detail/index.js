@@ -7,7 +7,7 @@ import {fetchDetailCourse} from '../../redux/actions/course';
 
 
 class CourseDetailScreen extends Component {
-
+    
     componentDidMount(){
         this.props.dispatch(fetchDetailCourse(this.props.match.params.courseId))
     }
@@ -23,6 +23,7 @@ class CourseDetailScreen extends Component {
 }
 
 const mapStateToProps = state => ({
+    //neu lay tren store null thi se lay object {} ben duoi 
     courseDetail: state.course.courseDetail || {
         MaKhoaHoc: '',
         TenKhoaHoc: '',
